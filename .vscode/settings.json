@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/6a27d898-ae76-4e82-8548-5e9b1d6430e6/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Javascript-Snake",
+    "appService.deploySubpath": "."
+}
