@@ -29,11 +29,17 @@ class Grid {
 	}
 
 	render() {
+		const container = document.createElement("div");
+		container.style = "height: 100vh; width: 100vw; position: fixed; top: 0px; left: 0px; display: flex; justify-content:center; align-items:center";
+		container.id = "JavaScriptSnakeGameContainer";
+
+		document.body.appendChild(container);
+
 		this.element = document.createElement("div");
-		this.element.style = `display: grid; grid-template: repeat(${this.size}, 1fr) / repeat(${this.size}, 1fr); background-color: lightgray; height: 100vmin; width: 100vmin;`;
+		this.element.style = `display: grid; grid-template: repeat(${this.size}, 1fr) / repeat(${this.size}, 1fr); background-color: lightgray; height: 90vmin; width: 90vmin;`;
 		this.element.id = "JavascriptSnakeGameGrid";
 
-		document.body.appendChild(this.element);
+		container.appendChild(this.element);
 	}
 
 	get(coord) {
@@ -184,7 +190,7 @@ class Queue {
 }
 
 class InputHandler {
-	maxLength = 3;
+	maxLength = 4;
 	buffer;
 
 	constructor() {
@@ -373,4 +379,4 @@ class Game {
 	}
 }
 
-const game = new Game(50, 200);
+const game = new Game(30, 100);
