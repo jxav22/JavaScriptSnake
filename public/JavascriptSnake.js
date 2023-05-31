@@ -349,7 +349,9 @@ class Game {
 		} else {
 			const gameObject = this.grid.get(nextLocation);
 
-			if (gameObject instanceof SnakeObject && gameObject !== this.snake.head.value) {
+			if (gameObject === this.snake.head.value){
+				this.snakeAI.moveSnake();
+			} else if (gameObject instanceof SnakeObject) {
 				this.playState = Game.PlayState.LOST;
 			} else if (gameObject instanceof FoodObject) {
 				this.snakeAI.moveSnake(true);
