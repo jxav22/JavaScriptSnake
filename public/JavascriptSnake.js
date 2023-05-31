@@ -51,23 +51,23 @@ class Grid {
 	}
 
 	clear(coord) {
-		this.grid[coord.x][coord.y] = undefined;
+		this.set(coord, undefined);
 	}
 
 	isEmpty(coord) {
-		return typeof this.grid[coord.x][coord.y] === 'undefined'
+		return typeof this.get(coord) === 'undefined'
 	}
 
 	getRandomCoord() {
-		const getRandomNumber = (max) => {
-			return Math.floor(Math.random() * max);
+		const getRandomIndex = () => {
+			return Math.floor(Math.random() * this.size);
 		}
 
-		const coord = new Coord(getRandomNumber(this.size), getRandomNumber(this.size));
+		const coord = new Coord(getRandomIndex(), getRandomIndex());
 
 		while (!this.isEmpty(coord)) {
-			coord.x = getRandomNumber(this.size);
-			coord.y = getRandomNumber(this.size);
+			coord.x = getRandomIndex();
+			coord.y = getRandomIndex();
 		}
 
 		return coord;
@@ -224,9 +224,9 @@ class InputHandler {
 		}
 
 		document.addEventListener("keydown", function (event) {
-			if (inputBuffer.length < maxLength){
+			if (inputBuffer.length < maxLength) {
 				handleInput(event)
-			}			
+			}
 		});
 	}
 }
@@ -235,7 +235,7 @@ class SnakeAI {
 	snake;
 	grid;
 
-	movementDirection;
+	movementDirection; // direction the snake will travel in
 	directionLastMoved;
 
 	constructor(snake, grid) {
@@ -277,7 +277,7 @@ class SnakeAI {
 		this.propogate(coord, grow);
 	}
 
-	setDirection(direction) {
+	setMovementDirection(direction) {
 		const isSnakeOneLong = this.snake.length <= 1;
 		const isDirectionIntoBody = direction.isEqual(Game.getOppositeDirection(this.directionLastMoved));
 
@@ -338,8 +338,8 @@ class Game {
 
 	gameLoop() {
 		const directionalInput = this.inputHandler.getInput();
-		if (directionalInput !== null){
-			this.snakeAI.setDirection(directionalInput);
+		if (directionalInput !== null) {
+			this.snakeAI.setMovementDirection(directionalInput);
 		}
 
 		const nextLocation = this.snakeAI.getNextLocation();
@@ -349,7 +349,7 @@ class Game {
 		} else {
 			const gameObject = this.grid.get(nextLocation);
 
-			if (gameObject instanceof SnakeObject) {
+			if (gameObject instanceof SnakeObject && gameObject !== this.snake.head.value) {
 				this.playState = Game.PlayState.LOST;
 			} else if (gameObject instanceof FoodObject) {
 				this.snakeAI.moveSnake(true);
