@@ -36,6 +36,5 @@ npm run dev
 Open your browser and visit http://localhost:3000 to play the game!
 
 # Deployment
-The game is deployed on Vercel, providing a live demo accessible at [[Game Link]]
-
-Additionally, you can deploy the game to Azure by following the Azure deployment documentation provided in the repository.
+Alternatively, take a look at my portfolio for a live deployment :)
+https://portfolio-jxav22.vercel.app/
