@@ -6,7 +6,7 @@ I rebuilt snake, but with intentional limitation that everything is in JavaScrip
 ![image](https://github.com/jxav22/JavaScriptSnake/assets/94942712/5e4cddfb-d2d8-44fd-bf08-d7d5384ec7cc)
 
 ## Features
-#### *Vinalla JavaScript*
+#### *Vanilla JavaScript*
 Everything, including the styling and instantiataion of HTML elements, is done in JavaScript.
   
 #### *High performing*
