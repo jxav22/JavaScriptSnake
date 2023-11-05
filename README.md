@@ -1,30 +1,34 @@
-# JavaScript Snake 🐍 
-I rebuilt the classic arcade game with the intentional limitation that everything, including the styling and HTML elements, is instantiated in JavaScript.
+# JavaScript Snake 🐍
+I rebuilt snake, but with intentional limitation that everything is in JavaScript.
 
-I heavily proritized writing clean, efficient code and creating optimized algorithms. 
+[Here's a link to the main file](https://github.com/jxav22/JavaScriptSnake/blob/main/public/JavascriptSnake.js)
 
-Notably, no method in this project has a time complexity greater than O(n)!
+![image](https://github.com/jxav22/JavaScriptSnake/assets/94942712/5e4cddfb-d2d8-44fd-bf08-d7d5384ec7cc)
 
 ## Features
-- *Pure Vinalla JavaScript*: The entire game, including styling and HTML elements, is built using JavaScript.
+#### *Vinalla JavaScript*
+Everything, including the styling and instantiataion of HTML elements, is done in JavaScript.
   
-- *Efficient Code*: All functions are optimized, ensuring excellent performance without compromising on functionality.
-  
-- *Responsive Design*: The game is designed to work seamlessly on any screen size, providing a consistent gaming experience.
+#### *High performing*
+I put a lot of consideration into algorithm efficiency, as a result no method has a time complexity greater than O(n).
 
+#### *A principled design*
+I utilized OOP and SOLID principles to create a modular, reusuable design. 
+
+Notably, the rendering logic is kept seperate from the game logic, it is a design that can easily be reimplemented in any language.
+  
 ## Technologies Used
-- *Next.js*: Built on top of Next.js, ensuring a smooth and interactive user experience.
-  
-- *Deploymen*t: The game is deployed on Vercel, providing fast and reliable hosting. Additionally, it can be deployed to Azure - there's a lot of flexibility in deployment options.
+`JavaScript` `NextJS` `Vercel`
 
-# How to Play
+## How to Play
+Use the arrow keys, on your keyboard, to control the snake's direction.
 
-Use the arrow keys on your keyboard to control the snake's direction.
 Collect the food items to increase the length of the snake.
+
 Avoid colliding with the walls or the snake's own body, as it's game over after that.
 
 ## Installation
-To run the project locally, follow these steps:
+To run this locally, follow these steps:
 
 ```
 git clone <repository-url>
@@ -33,8 +37,9 @@ npm install
 npm run dev
 ```
 
-Open your browser and visit http://localhost:3000 to play the game!
+Then open your browser and visit [http://localhost:3000](http://localhost:3000) to play
 
-# Deployment
-Alternatively, take a look at my portfolio for a live deployment :)
-https://portfolio-jxav22.vercel.app/
+## A live deployment
+Alternatively, take a look at my portfolio for a live deployment
+
+[https://vercel.com/jxav22/portfolio](https://vercel.com/jxav22/portfolio)
