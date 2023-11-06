@@ -42,4 +42,4 @@ Then open your browser and visit [http://localhost:3000](http://localhost:3000) 
 ## A live deployment
 Alternatively, take a look at my portfolio for a live deployment
 
-[https://vercel.com/jxav22/portfolio](https://vercel.com/jxav22/portfolio)
+[https://portfolio-jxav22.vercel.app/](https://portfolio-jxav22.vercel.app/)
